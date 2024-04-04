@@ -1,0 +1,9 @@
+﻿<PartialBlock xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+
+	<StackPanel Orientation="Horizontal">
+
+		<Button Content="Index" Command="{BindCmd Execute, CommandName='MakeClick', Argument='page-0'}"/>
+		
+	</StackPanel>
+
+</PartialBlock>

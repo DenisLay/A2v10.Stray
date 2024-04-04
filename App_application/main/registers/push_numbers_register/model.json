@@ -1,0 +1,12 @@
+﻿{
+  "$schema": "../../@schemas/model-json-schema.json#",
+  "schema": "app",
+  "model": "PushNumbersRegister",
+  "actions": {
+    "index": {
+      "index": true,
+      "template": "component/push_numbers_register.template",
+      "view": "component/push_numbers_register.view"
+    }
+  }
+}

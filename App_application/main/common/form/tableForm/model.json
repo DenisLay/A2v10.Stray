@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../@schemas/model-json-schema.json#",
+  "schema": "app",
+  "actions": {
+    "index": {
+      "index": "true",
+      "model": "TableForm",
+      "template": "index.template",
+      "view": "index.view"
+      //"skipDataStack": false
+    }
+  }
+}

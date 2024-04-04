@@ -1,0 +1,28 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+
+	<TabBar Value="{Bind Root.$$PageControllerIndex}">
+		<TabBar.Description>
+			Список форм компоненту
+		</TabBar.Description>
+		<TabButton Content="Список" ActiveValue="0"/>
+		<TabButton Content="Документ" ActiveValue="1"/>
+		<TabButton Content="Вибір" ActiveValue="2"/>
+		<TabButton Content="Таблична форма" ActiveValue="3"/>
+	</TabBar>
+
+	<Switch Expression="{Bind Root.$$PageControllerIndex}" Margin="20">
+		<Case Value="0">
+			<Include Source="/registers/push_numbers_register/form/index/index" FullHeight="True"/>
+		</Case>
+		<Case Value="1">
+			<Include Source="/registers/push_numbers_register/form/entity/index" FullHeight="True"/>
+		</Case>
+		<Case Value="2">
+			<Include Source="/registers/push_numbers_register/form/select/index" FullHeight="True"/>
+		</Case>
+		<Case Value="3">
+			<Include Source="/common/form/tableForm/index" FullHeight="True" Argument="{Bind Root.Table}"/>
+		</Case>
+	</Switch>
+
+</Page>

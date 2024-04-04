@@ -1,0 +1,27 @@
+﻿<PartialBlock xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+
+	<StackPanel Orientation="Horizontal">
+
+		<Button Content="Entity" Command="{BindCmd Execute, CommandName='MakeClick', Argument='page-1'}" />
+
+		<DataGrid ItemsSource="{Bind Parent.ItemsSource}" XamlStyle="{StyleResource DataGridSimple}" FixedHeader="False"
+				  DoubleClick="{BindCmd Dialog, Action=EditSelected, Argument={Bind Parent.ItemsSource}, Url='/documents/push_numbers/edit'}">
+
+			<DataGridColumn Header="Дата" Content="{Bind Date, DataType=Date}" Align="Center"/>
+			<DataGridColumn Header="Номер" Content="{Bind Id}" Role="Id"/>
+			<DataGridColumn Header="Опис" Content="{Bind Memo}"/>
+
+			<DataGridColumn Header="Дії" Fit="True">
+				<CommandBar Visibility="Hover">
+					<Button Icon="Edit"
+						   Command="{BindCmd Dialog, Action=Edit, Argument={Bind}, Url='/documents/push_numbers/edit'}"/>
+					<Button Icon="Delete"
+						   Command="{BindCmd DbRemove, Argument={Bind}, Confirm='@[Confirm.Delete.Element]'}" />
+				</CommandBar>
+			</DataGridColumn>
+
+		</DataGrid>
+		
+	</StackPanel>
+
+</PartialBlock>

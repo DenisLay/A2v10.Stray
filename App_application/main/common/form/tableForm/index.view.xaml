@@ -1,0 +1,9 @@
+﻿<PartialBlock xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+
+	<StackPanel Orientation="Vertical">
+
+		<Panel TestId="TableForm__table" />
+		
+	</StackPanel>
+
+</PartialBlock>

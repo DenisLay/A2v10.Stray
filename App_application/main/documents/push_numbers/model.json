@@ -1,0 +1,19 @@
+﻿{
+  "$schema": "../../@schemas/model-json-schema.json#",
+  "schema": "app",
+  "model": "PushNumbers",
+  "actions": {
+    "index": {
+      "index": true,
+      "template": "push_numbers.template",
+      "view": "push_numbers.view"
+    }
+  },
+  "dialogs": {
+    "edit": {
+      "index": false,
+      "template": "edit.dialog/edit.template",
+      "view": "edit.dialog/edit.view"
+    }
+  }
+}

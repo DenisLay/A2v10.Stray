@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../@schemas/model-json-schema.json#",
+  "schema": "app",
+  "actions": {
+    "index": {
+      "model": "PushNumbersRegisterSelect",
+      "template": "index.template",
+      "view": "index.view"
+      //"skipDataStack": false
+    }
+  }
+}
